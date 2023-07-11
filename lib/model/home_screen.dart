@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
         title: Text('Angkringan'),
         backgroundColor: Colors.green[700],
       ),
+      bottomNavigationBar: Navbar(),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -102,6 +103,62 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class Navbar extends StatelessWidget {
+  const Navbar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  BottomAppBar(
+      child: Container(
+        height: 60.0,
+        child: Padding(
+          padding: EdgeInsets.only(top: 8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/');
+                },
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: Color.fromARGB(238, 175, 119, 76),
+                    ),
+                    Text(
+                      'Home',
+                      style: TextStyle(fontSize: 12.00),
+                    )
+                  ],
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.account_box,
+                      color: Colors.black45,
+                    ),
+                    Text(
+                      'Profile',
+                      style: TextStyle(fontSize: 12.00),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

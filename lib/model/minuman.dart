@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_akhir/model/pesanan.dart';
 
 class MinumanScreen extends StatelessWidget {
   @override
@@ -19,7 +20,30 @@ class MinumanScreen extends StatelessWidget {
             description: 'Minuman jeruk segar dengan es.',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbdbeyiaqOXzXEFUp9Yfkv6DqI0-y2O6veQ&usqp=CAU',
           ),
-          // Tambahkan item minuman lainnya di sini
+          _buildMinumanItem(
+            name: 'Es Cincau Susu',
+            description: 'Minuman cincau segar dengan es dan tambahan susu.',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJdzZ5l1nFwMHbYxzELUPpSFYU9WBdLp-PFg&usqp=CAU',
+          ),
+          _buildMinumanItem(
+            name: 'Milkshake',
+            description: 'Minuman dingin dengan campuran susu dan es krim .',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA-5dcjd9EwNhvutxxy06vNux5lu6yEE02jA&usqp=CAU',
+          ),
+          _buildMinumanItem(
+            name: 'Es Kelapa Muda',
+            description: 'Minuman air kelapa segar dengan tambahan susu/gula.',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNGOK9dlx0SaD_wnRWTO8m9P8XpAn7Y-ncJQ&usqp=CAU',
+          ),
+          SizedBox(height: 16.0),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Pesanan()),
+                 );
+              },
+              child: Text('Pesan'),
+            ),
         ],
       ),
     );
