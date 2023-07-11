@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_akhir/model/pesanan.dart';
 
 class PembayaranScreen extends StatefulWidget {
   @override
@@ -61,7 +62,7 @@ class _PembayaranScreenState extends State<PembayaranScreen> {
                     trailing: IconButton(
                       icon: Icon(Icons.remove_circle),
                       onPressed: () {
-                        _removeFromCart(item, 10); 
+                        _removeFromCart(item, 10);
                       },
                     ),
                   );
