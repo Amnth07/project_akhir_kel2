@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projek_akhir/model/sosis.dart';
 import 'package:projek_akhir/model/pempek.dart';
 import 'package:projek_akhir/model/minuman.dart';
+import 'package:projek_akhir/model/bakso.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -56,6 +57,16 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => PempekScreen()),
+                      );
+                    },
+                  ),
+                   _buildMenuItem(
+                    icon: Icons.fastfood,
+                    title: 'Bakso',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BaksoScreen()),
                       );
                     },
                   ),
