@@ -20,16 +20,6 @@ class SosisScreen extends StatelessWidget {
             description: 'Sosis daging sapi dengan cita rasa yang gurih.',
             imageUrl: 'https://mesra.luberta.com/wp-content/uploads/sites/46/2014/10/sosis-lezat.jpg',
           ),
-
-          SizedBox(height: 16.0),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Pesanan()),
-                 );
-              },
-              child: Text('Pesan'),
-            ),
           _buildSosisItem(
             name: 'Sosis Pedas Manis',
             description: 'Sosis pedas manis dengan rasa yang lezat dan mantap.',
@@ -45,6 +35,15 @@ class SosisScreen extends StatelessWidget {
             description: 'Sosis crispy dengan cita rasa yang lezat ',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVdi4tH79av404wrn9IBYpfXwav0Nqa1i07Q&usqp=CAU',
           ),
+          SizedBox(height: 16.0),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Pesanan()),
+                 );
+              },
+              child: Text('Pesan'),
+            ),
         ],
       ),
     );

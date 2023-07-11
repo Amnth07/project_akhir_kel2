@@ -22,16 +22,7 @@ class PempekScreen extends StatelessWidget {
             imageUrl:
                 'https://assets.ayobandung.com/crop/2x0:1199x721/750x500/webp/photo/2023/03/16/pempek-3174024653.png',
           ),
-          SizedBox(height: 16.0),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Pesanan()),
-              );
-            },
-            child: Text('Pesan'),
-          ),
+          
           _buildPempekItem(
             name: 'Pempek Adaan',
             description: 'Pempek adaan khas palembang.',
@@ -49,6 +40,16 @@ class PempekScreen extends StatelessWidget {
             description: 'Pempek Crispy yang enak dan lezat.',
             imageUrl:
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn7v1Bt8xpmj3WosNq_16elq0XuJ8pkGuAiA&usqp=CAU',
+          ),
+          SizedBox(height: 16.0),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Pesanan()),
+              );
+            },
+            child: Text('Pesan'),
           ),
         ],
       ),
