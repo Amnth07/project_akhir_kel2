@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_akhir/model/pesanan.dart';
 
 class BaksoScreen extends StatelessWidget {
   @override
@@ -34,12 +35,26 @@ class BaksoScreen extends StatelessWidget {
             description: 'Bakso crispy dengan cita rasa yang lezat ',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7tT2Z3B2gq0L3cV-f9iPGA4XsCDp_haiP3Q&usqp=CAU',
           ),
+          SizedBox(height: 16.0),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Pesanan()),
+              );
+            },
+            child: Text('Pesan'),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildSosisItem({required String name, required String description, required String imageUrl}) {
+  Widget _buildSosisItem({
+    required String name,
+    required String description,
+    required String imageUrl,
+  }) {
     return Card(
       child: ListTile(
         leading: Image.network(

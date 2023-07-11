@@ -65,9 +65,9 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/logo.jpg',
-                height: 120,
+              CircleAvatar(
+                radius: 60,
+                backgroundImage: AssetImage('assets/images/logo.jpg'),
               ),
               SizedBox(height: 20.0),
               TextField(
