@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_akhir/model/pesanan.dart';
 
 class SosisScreen extends StatelessWidget {
   @override
@@ -19,6 +20,16 @@ class SosisScreen extends StatelessWidget {
             description: 'Sosis daging sapi dengan cita rasa yang gurih.',
             imageUrl: 'https://mesra.luberta.com/wp-content/uploads/sites/46/2014/10/sosis-lezat.jpg',
           ),
+
+          SizedBox(height: 16.0),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Pesanan()),
+                 );
+              },
+              child: Text('Pesan'),
+            ),
           _buildSosisItem(
             name: 'Sosis Pedas Manis',
             description: 'Sosis pedas manis dengan rasa yang lezat dan mantap.',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_akhir/model/pesanan.dart';
 
 class PempekScreen extends StatelessWidget {
   @override
@@ -18,7 +19,15 @@ class PempekScreen extends StatelessWidget {
             name: 'Pempek Lenjer',
             description: 'Pempek panjang dengan isi yang kenyal.',
             imageUrl: 'https://assets.ayobandung.com/crop/2x0:1199x721/750x500/webp/photo/2023/03/16/pempek-3174024653.png',
-          ),
+          SizedBox(height: 16.0),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Pesanan()),
+                 );
+              },
+              child: Text('Pesan'),
+            ),
            _buildPempekItem(
             name: 'Pempek Adaan',
             description: 'Pempek adaan khas palembang.',
