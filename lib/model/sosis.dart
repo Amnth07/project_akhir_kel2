@@ -19,7 +19,21 @@ class SosisScreen extends StatelessWidget {
             description: 'Sosis daging sapi dengan cita rasa yang gurih.',
             imageUrl: 'https://mesra.luberta.com/wp-content/uploads/sites/46/2014/10/sosis-lezat.jpg',
           ),
-          // Tambahkan item sosis lainnya di sini
+          _buildSosisItem(
+            name: 'Sosis Pedas Manis',
+            description: 'Sosis pedas manis dengan rasa yang lezat dan mantap.',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR790iEiJOSRYTkBatJb0c1zXALUclXMX-zQA&usqp=CAU',
+          ),
+          _buildSosisItem(
+            name: 'Sosis Mayonaise',
+            description: 'Sosis dengan cita rasa yang lezat ditambahi dengan Mayonaise',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdIeHDhgz1IRQh5Jxx5BqQszA3c6PPlGB-nQ&usqp=CAU',
+          ),
+          _buildSosisItem(
+            name: 'Sosis Crispy',
+            description: 'Sosis crispy dengan cita rasa yang lezat ',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVdi4tH79av404wrn9IBYpfXwav0Nqa1i07Q&usqp=CAU',
+          ),
         ],
       ),
     );
