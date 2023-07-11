@@ -3,6 +3,7 @@ import 'package:projek_akhir/model/sosis.dart';
 import 'package:projek_akhir/model/pempek.dart';
 import 'package:projek_akhir/model/minuman.dart';
 import 'package:projek_akhir/model/bakso.dart';
+import 'package:projek_akhir/menu_pembayaran.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -76,7 +77,18 @@ class HomeScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => MinumanScreen()),
+                        MaterialPageRoute(builder: (context) => MinumanScreen()
+                        ),
+                      _buildMenuItem(
+                        icon: Icons.payment,
+                        title: 'Pembayaran',
+                       onTap: () {
+                        Navigator.push(
+                        context,
+                         MaterialPageRoute(builder: (context) => PembayaranScreen()),
+                         );
+  },
+),
                       );
                     },
                   ),
