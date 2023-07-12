@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:projek_akhir/login_sreen.dart';
 import 'package:projek_akhir/model/pembayaran.dart';
 import 'package:projek_akhir/model/sosis.dart';
 import 'package:projek_akhir/model/pempek.dart';
 import 'package:projek_akhir/model/minuman.dart';
 import 'package:projek_akhir/model/bakso.dart';
 import 'package:projek_akhir/model/pembayaran.dart';
+import 'package:projek_akhir/model/profile.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -167,7 +169,7 @@ class Navbar extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, '/profile');
+                 Navigator.push(context,MaterialPageRoute(builder: (context) => ProfileScreen()),);
                 },
                 child: Column(
                   children: [
@@ -177,6 +179,24 @@ class Navbar extends StatelessWidget {
                     ),
                     Text(
                       'Profile',
+                      style: TextStyle(fontSize: 12.00),
+                    )
+                  ],
+                ),
+              ),
+              InkWell(
+                onTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                      context, '/login', (route) => false);
+                },
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.logout_sharp,
+                      color: Colors.black45,
+                    ),
+                    Text(
+                      'logout',
                       style: TextStyle(fontSize: 12.00),
                     )
                   ],
